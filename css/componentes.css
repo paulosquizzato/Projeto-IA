@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #F8FAFC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 75px;
+    width: 100%;
+    background-color: #AEEFB1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: rgba(0, 165, 19, 0.75);
+    margin: 0;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 50px;
+}
+
+header nav .barra {
+    height: 30px;
+    width: 5px;
+    border-radius: 3px;
+    background-color: rgba(0, 165, 19, 0.25);
+}
+
+header nav a {
+    text-decoration: none;
+    color: #00A613;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    transition: 0.3s ease;
+}
+
+header nav a:hover {
+    transform: scale(1.1);
+    color: rgb(0, 71, 8);
+}
+
+header button {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 165, 19, 0.75);
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+header button:hover {
+    transform: scale(1.1);
+}
+
+header button img {
+    height: 25px;
+    width: 25px;
+    transform: rotate(-35deg);
+}
+
+footer {
+    height: 55px;
+    width: auto;
+    background-color: #A9FFB3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-weight: bold;
+}

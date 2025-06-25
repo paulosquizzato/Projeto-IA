@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INCLUia</title>
+    <!-- CSS -->
+     <link rel="stylesheet" href="css/inicio.css" />
+     <link rel="stylesheet" href="css/componentes.css" />
+    <!-- JS -->
+</head>
+<body>
+    <header>
+        <h1>INCLUia</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <div class="barra"></div>
+            <a href="categorias.html">Categorias</a>
+            <div class="barra"></div>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+        <button id="toggle-btn">
+            <img id="toggle-icon" src="img/moon-stars.png" alt="Tema">
+        </button>
+    </header>
+    <main>
+        <p id="resumo">O avanço da Inteligência Artificial tem possibilitado novas formas de ensino e aprendizagem, ampliando a personalização dos conteúdos e promovendo experiências educacionais mais acessíveis e adaptativas. No entanto, a adoção dessas tecnologias na educação ainda enfrenta desafios, como a falta de conhecimento dos professores sobre as ferramentas disponíveis e a ausência de diretrizes para sua implementação pedagógica. Assim, este projeto tem como objetivo mapear e analisar ferramentas digitais baseadas em IA que possam ser utilizadas por professores no processo de ensino, identificando suas funcionalidades, potencial pedagógico e contribuições para a inovação e inclusão educacional.</p>
+        <section>
+            <div id="linha-1"></div>
+            <div id="linha-2"></div>
+            <div id="linha-3"></div>
+            <div id="linha-4"></div>
+            <div id="linha-5"></div>
+
+           <div class="camada-1">
+                <div class="point chatgpt"></div>
+                <div class="point deepseek"></div>
+                <div class="point blackbox"></div>
+                <div class="point leonardoai"></div>
+            </div>
+            <h3 class="texto-camada pid">PID</h3>
+
+            <div class="camada-2"></div>
+            <h3 class="texto-camada pic">PIC</h3>
+            
+            <div class="camada-3"></div>
+            <h3 class="texto-camada ea">EA</h3>
+            
+            <div class="camada-4"></div>
+            <h3 class="texto-camada sa">SA</h3>
+            
+            <div class="camada-5"></div>
+            <h3 class="texto-camada al">AL</h3>
+            
+            <div class="camada-6"></div>
+            <h3 class="texto-camada mpa">MPA</h3>
+            
+            <div class="camada-7"></div>
+            <h3 class="texto-camada aca">ACA</h3>
+            
+            <div class="camada-0"></div>
+
+            <h2 id="vid">Vídeo</h2>
+            <h2 id="mod">Modal</h2>
+            <h2 id="aud">Áudio</h2>
+            <h2 id="tex">Texto</h2>
+            <h2 id="img">Imagem</h2>
+        </section>
+        <div id="painel-overlay">
+    <!-- ChatGPT -->
+    <div class="painel-box" id="painel-chatgpt">
+        <img src="img/IAs/ChatGPT.png" alt="ChatGPT">
+        <h2>ChatGPT</h2>
+        <p>É uma IA do tipo modal capaz de fazer variados tipos de serviços e trabalhos.</p>
+        <button class="fechar-painel">Fechar</button>
+    </div>
+
+    <!-- DeepSeek -->
+    <div class="painel-box" id="painel-deepseek">
+        <img src="img/IAs/Deepseek.png" alt="DeepSeek">
+        <h2>DeepSeek</h2>
+        <p>Uma IA voltada para pesquisa e análise de dados em profundidade, útil para extração de conhecimento em contextos educacionais.</p>
+        <button class="fechar-painel">Fechar</button>
+    </div>
+
+    <!-- Blackbox -->
+    <div class="painel-box" id="painel-blackbox">
+        <img src="img/IAs/Blackbox-ai.png" alt="Blackbox">
+        <h2>Blackbox</h2>
+        <p>Uma IA que auxilia no desenvolvimento de códigos, muito usada para depuração e sugestões em tempo real.</p>
+        <button class="fechar-painel">Fechar</button>
+    </div>
+
+    <!-- Leonardo.AI -->
+    <div class="painel-box" id="painel-leonardoai">
+        <img src="img/IAs/Leonardo-ai.png" alt="Leonardo.AI">
+        <h2>Leonardo.AI</h2>
+        <p>IA especializada em geração de imagens e artes criativas, voltada para educação visual e produção de conteúdo artístico.</p>
+        <button class="fechar-painel">Fechar</button>
+    </div>
+        </div>
+        <div id="Ordem">
+            <h2>Ordem</h2>
+            <div class="contant-box">
+                <h3>PID - Previsão e Intervençção de Desempenho Acadêmico</h3>
+                <h3>PIC - Previsão e Intervenção de Comportamento Acadêmico</h3>
+                <h3>EA - Engajamento de Alunos</h3>
+                <h3>SA - Suporte Automático</h3>
+                <h3>AL - Aconselhamento</h3>
+                <h3>MPA - Monitoramento do Processo de Aprendizagem</h3>
+                <h3>ACA - Avaliação/Classificação Automatizada</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>
+            2025 &copy; Instituto Federal Catarinense <em>campus</em> Fraiburgo
+        </span>
+    </footer>
+<script>
+    const painel = document.getElementById('painel-overlay');
+    const botoesFechar = document.querySelectorAll('.fechar-painel');
+
+    function abrirPainel(id) {
+        document.querySelectorAll('.painel-box').forEach(el => el.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        painel.classList.add('ativo');
+    }
+
+    // Eventos nos pontos
+    document.querySelector('.chatgpt').addEventListener('click', () => abrirPainel('painel-chatgpt'));
+    document.querySelector('.deepseek').addEventListener('click', () => abrirPainel('painel-deepseek'));
+    document.querySelector('.blackbox').addEventListener('click', () => abrirPainel('painel-blackbox'));
+    document.querySelector('.leonardoai').addEventListener('click', () => abrirPainel('painel-leonardoai'));
+
+    // Fechar painel
+    botoesFechar.forEach(btn => {
+        btn.addEventListener('click', () => {
+            painel.classList.remove('ativo');
+        });
+    });
+
+    painel.addEventListener('click', (e) => {
+        if (e.target === painel) {
+            painel.classList.remove('ativo');
+        }
+    });
+    const toggleBtn = document.getElementById("toggle-btn");
+    const toggleIcon = document.getElementById("toggle-icon");
+
+    let isDark = true;
+
+    toggleBtn.addEventListener("click", () => {
+        if (isDark) {
+            toggleIcon.src = "Img/sun.png";
+        } else {
+            toggleIcon.src = "Img/moon-stars.png";
+        }
+        isDark = !isDark;
+    });
+</script>
+</body>
+</html>
