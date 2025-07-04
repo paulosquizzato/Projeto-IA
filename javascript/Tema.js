@@ -32,9 +32,9 @@
 
     toggleBtn.addEventListener("click", () => {
         if (isDark) {
-            toggleIcon.src = "Img/sun.png";
+            toggleIcon.src = "img/sun.png";
         } else {
-            toggleIcon.src = "Img/moon-stars.png";
+            toggleIcon.src = "img/moon-stars.png";
         }
         isDark = !isDark;
     });
