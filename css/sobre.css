@@ -1,0 +1,68 @@
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.Painel {
+    width: 280px;
+    padding: 25px;
+    background-color: #AEEFB1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.Painel img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #d5ffd9; /* placeholder */
+}
+
+.Painel h1 {
+    font-size: 20px;
+    color: #006614;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===== Dark Mode sobre.css ===== */
+body.dark {
+    background-color: #424242;
+    color: #e0e0e0;
+    transition: 0.6s ease;
+}
+
+body.dark header {
+    background-color: #42613e;
+}
+
+body.dark nav a {
+    color: #e0e0e0;
+}
+
+body.dark nav a:hover {
+    color: #ffffff;
+}
+
+body.dark .barra {
+    background-color: #00c010;
+}
+
+body.dark  main p {
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #42613e;
+}
+
+body.dark footer span {
+    color: #00c010;
+}

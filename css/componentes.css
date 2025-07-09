@@ -78,6 +78,25 @@ header button:hover {
     transform: scale(1.1);
 }
 
+#toggle-btn {
+    background-color: #00A613;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+#toggle-btn:hover {
+    background: rgb(0, 100, 20, 0.5);
+}
+
+#toggle-icon {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
 header button img {
     height: 25px;
     width: 25px;

@@ -1,40 +1,64 @@
-    const painel = document.getElementById('painel-overlay');
-    const botoesFechar = document.querySelectorAll('.fechar-painel');
+// Painel
+const painel = document.getElementById('painel-overlay');
+const botoesFechar = document.querySelectorAll('.fechar-painel');
 
-    function abrirPainel(id) {
-        document.querySelectorAll('.painel-box').forEach(el => el.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
+// Abrir painel ao clicar nos pontos
+function abrirPainel(id) {
+    document.querySelectorAll('.painel-box').forEach(el => el.classList.remove('active'));
+    const box = document.getElementById(id);
+    if (box) {
+        box.classList.add('active');
         painel.classList.add('ativo');
     }
+}
 
-    // Eventos nos pontos
-    document.querySelector('.chatgpt').addEventListener('click', () => abrirPainel('painel-chatgpt'));
-    document.querySelector('.deepseek').addEventListener('click', () => abrirPainel('painel-deepseek'));
-    document.querySelector('.blackbox').addEventListener('click', () => abrirPainel('painel-blackbox'));
-    document.querySelector('.leonardoai').addEventListener('click', () => abrirPainel('painel-leonardoai'));
+document.querySelector('.chatgpt')?.addEventListener('click', () => abrirPainel('painel-chatgpt'));
+document.querySelector('.deepseek')?.addEventListener('click', () => abrirPainel('painel-deepseek'));
+document.querySelector('.blackbox')?.addEventListener('click', () => abrirPainel('painel-blackbox'));
+document.querySelector('.leonardoai')?.addEventListener('click', () => abrirPainel('painel-leonardoai'));
 
-    // Fechar painel
-    botoesFechar.forEach(btn => {
-        btn.addEventListener('click', () => {
-            painel.classList.remove('ativo');
-        });
+botoesFechar.forEach(btn => {
+    btn.addEventListener('click', () => {
+        painel.classList.remove('ativo');
+        document.querySelectorAll('.painel-box').forEach(el => el.classList.remove('active'));
     });
+});
 
-    painel.addEventListener('click', (e) => {
-        if (e.target === painel) {
-            painel.classList.remove('ativo');
-        }
-    });
+painel.addEventListener('click', (e) => {
+    if (e.target === painel) {
+        painel.classList.remove('ativo');
+        document.querySelectorAll('.painel-box').forEach(el => el.classList.remove('active'));
+    }
+});
+
+// Tema.js
+document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggle-btn");
     const toggleIcon = document.getElementById("toggle-icon");
+    const body = document.body;
 
-    let isDark = true;
+    // Aplica tema salvo (se houver)
+    const temaSalvo = localStorage.getItem("tema");
+    if (temaSalvo === "dark") {
+        body.classList.add("dark");
+        if (toggleIcon) toggleIcon.src = "img/sun.png";
+    } else {
+        body.classList.remove("dark");
+        if (toggleIcon) toggleIcon.src = "img/moon-stars.png";
+    }
 
-    toggleBtn.addEventListener("click", () => {
-        if (isDark) {
-            toggleIcon.src = "img/sun.png";
-        } else {
-            toggleIcon.src = "img/moon-stars.png";
-        }
-        isDark = !isDark;
-    });
+    // Alternar tema ao clicar
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            const modoAtual = body.classList.contains("dark") ? "dark" : "light";
+            localStorage.setItem("tema", modoAtual);
+
+            // Atualiza ícone
+            if (toggleIcon) {
+                toggleIcon.src = modoAtual === "dark" ? "img/sun.png" : "img/moon-stars.png";
+            }
+        });
+    }
+});

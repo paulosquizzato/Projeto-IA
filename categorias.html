@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>INCLUia</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/categorias.css">
 </head>
 <body>
     <header>
         <h1>INCLUia</h1>
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html">Início</a>
             <div class="barra"></div>
             <a href="categorias.html">Categorias</a>
             <div class="barra"></div>
             <a href="sobre.html">Sobre</a>
-            <button id="toggle-btn">
-            <img id="toggle-icon" src="img/moon-stars.png" alt="Tema">
-            </button>
         </nav>
+        <button id="toggle-btn" aria-label="Alternar tema claro/escuro">
+            <img id="toggle-icon" src="img/moon-stars.png" alt="Ícone do tema">
+        </button>
     </header>
+
     <main>
 
     </main>
@@ -29,5 +31,38 @@
             2025 &copy; Instituto Federal Catarinense <em>campus</em> Fraiburgo
         </span>
     </footer>
+    <script>
+        // Tema.js
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggle-btn");
+    const toggleIcon = document.getElementById("toggle-icon");
+    const body = document.body;
+
+    // Aplica tema salvo (se houver)
+    const temaSalvo = localStorage.getItem("tema");
+    if (temaSalvo === "dark") {
+        body.classList.add("dark");
+        if (toggleIcon) toggleIcon.src = "img/sun.png";
+    } else {
+        body.classList.remove("dark");
+        if (toggleIcon) toggleIcon.src = "img/moon-stars.png";
+    }
+
+    // Alternar tema ao clicar
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            const modoAtual = body.classList.contains("dark") ? "dark" : "light";
+            localStorage.setItem("tema", modoAtual);
+
+            // Atualiza ícone
+            if (toggleIcon) {
+                toggleIcon.src = modoAtual === "dark" ? "img/sun.png" : "img/moon-stars.png";
+            }
+        });
+    }
+});
+    </script>
 </body>
 </html>

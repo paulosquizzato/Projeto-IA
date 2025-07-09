@@ -3,7 +3,7 @@ main {
     padding: 20px;
 }
 
-main #Ordem {
+main #pp {
     height: auto;
     width: 550px;
     background-color: #AEEFB1;
@@ -16,14 +16,14 @@ main #Ordem {
     box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.15);
 }
 
-main #Ordem h2{
+main #pp h2{
     text-align: center;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
-main #Ordem .contant-box h3{
+main #pp .contant-box h3{
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: bold;
@@ -75,8 +75,8 @@ section {
 }
 
 .camada-1 {
-    width: 1100px;
-    height: 1100px;
+    width: 950px;
+    height: 950px;
     border-radius: 50%;
     background-color: #F3E6FF;
     border: 3px solid white;
@@ -84,13 +84,13 @@ section {
 }
 
 .camada-1:hover {
-  width: 1120px;
-  height: 1120px;
+  width: 970px;
+  height: 970px;
 }
 
 .camada-2 {
-    width: 950px;
-    height: 950px;
+    width: 850px;
+    height: 850px;
     border-radius: 50%;
     background-color: #D4B3F2;
     border: 3px solid white;
@@ -98,13 +98,13 @@ section {
 }
 
 .camada-2:hover {
-    width: 970px;
-    height: 970px;
+    width: 870px;
+    height: 870px;
 }
 
 .camada-3 {
-    width: 800px;
-    height: 800px;
+    width: 750px;
+    height: 750px;
     border-radius: 50%;
     background-color: #A066E0;
     border: 3px solid white;
@@ -112,8 +112,8 @@ section {
 }
 
 .camada-3:hover {
-    width: 820px;
-    height: 820px;
+    width: 770px;
+    height: 770px;
 }
 
 .camada-4 {
@@ -131,8 +131,8 @@ section {
 }
 
 .camada-5 {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     background-color: #3B0C61;
     border: 3px solid white;
@@ -140,13 +140,13 @@ section {
 }
 
 .camada-5:hover {
-    width: 520px;
-    height: 520px;
+    width: 470px;
+    height: 470px;
 }
 
 .camada-6 {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background-color: #180527;
     border: 3px solid white;
@@ -154,13 +154,13 @@ section {
 }
 
 .camada-6:hover {
-    width: 370px;
-    height: 370px;
+    width: 270px;
+    height: 270px;
 }
 
 .camada-7 {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     background-color: #000;
     border: 3px solid white;
@@ -168,13 +168,13 @@ section {
 }
 
 .camada-7:hover {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
 }
 
 .camada-0 {
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: #ffffff;
     border: 3px solid white;
@@ -222,27 +222,27 @@ section h2 {
     box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.25);
 }
 
-#vid {
+#mod {
     top: calc(50% - 520px);
     left: calc(50% - 420px);
 }
 
-#mod {
+#tex {
     top: calc(50% - 520px);
     left: calc(50% + 420px);
 }
 
-#aud {
+#img {
     top: calc(50% + 200px);
     left: calc(50% + 610px);
 }
 
-#tex {
+#aud {
     top: calc(50% + 590px);
     left: 50%;
 }
 
-#img {
+#vid {
     top: calc(50% + 200px);
     left: calc(50% - 620px);
 }
@@ -254,6 +254,17 @@ section h2 {
     border-radius: 50%;
     transition: ease 0.5s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point img {
+    height: 5px;
+    width: 5px;
+    visibility: hidden;
+    transition: ease 0.5s;
+
 }
 
 .point.chatgpt {
@@ -264,25 +275,35 @@ section h2 {
 }
 
 .point.deepseek {
+    transform: translate(-50%, -50%);
     background-color: #ffee00;
     left: 47%;
     top: 96%;
 }
 
 .point.blackbox {
+    transform: translate(-50%, -50%);
     background-color: #ff0000;
     left: 63%;
     top: 94%;
 }
 
 .point.leonardoai {
+    transform: translate(-50%, -50%);
     background-color: #979797;
     left: 4%;
     top: 60%;
 }
 
 .point:hover {
-    transform: scale(3);
+    height: 35px;
+    width: 35px;
+}
+
+.point:hover img {
+    visibility: visible;
+    height: 25px;
+    width: 25px;
 }
 
 #painel-overlay {
@@ -333,19 +354,24 @@ section h2 {
 }
 
 .fechar-painel {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #00A613;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    background-color: #ff0000;
     border: none;
     border-radius: 8px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 10;
 }
 
 .fechar-painel:hover {
-    background-color: #007f0f;
+    background-color: #b60000;
+    transform: scale(1.1);
 }
 
 .painel-box {
@@ -359,6 +385,7 @@ section h2 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     z-index: 1000;
+    position: relative;
 }
 
 .painel-box.active {
@@ -412,4 +439,77 @@ section h2 {
 .texto-camada.aca {
     top: calc(50% - 90px);
     left: 50%;
+}
+
+body.dark {
+    background-color: #424242;
+    color: #e0e0e0;
+    transition: 0.6s ease;
+}
+
+body.dark header {
+    background-color: #42613e;
+}
+
+body.dark nav a {
+    color: #e0e0e0;
+}
+
+body.dark nav a:hover {
+    color: #ffffff;
+}
+
+body.dark .barra {
+    background-color: #00c010;
+}
+
+body.dark #pp,
+body.dark .painel-box,
+body.dark #painel-conteudo {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark section h2 {
+    background-color: #eeeeee;
+    color: #121212;
+}
+
+body.dark .texto-camada {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark .camada-1 { background-color: #000000; }
+body.dark .camada-2 { background-color: #180527; }
+body.dark .camada-3 { background-color: #3B0C61; }
+body.dark .camada-4 { background-color: #6C30A6; }
+body.dark .camada-5 { background-color: #A066E0; }
+body.dark .camada-6 { background-color: #D4B3F2; }
+body.dark .camada-7 { background-color: #F3E6FF; }
+body.dark .camada-0 { background-color: #ffffff; }
+
+body.dark .point {
+    filter: brightness(0.8);
+}
+
+body.dark .fechar-painel {
+    background-color: #c62828;
+}
+
+body.dark .fechar-painel:hover {
+    background-color: #9a0000;
+}
+
+body.dark  main p {
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #42613e;
+}
+
+body.dark footer span {
+    color: #00c010;
 }
