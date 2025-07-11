@@ -1,11 +1,26 @@
 main {
     flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+}
+
+main h1 {
+    font-size: 45px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.equipe-container {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 40px;
+    gap: 50px;
+    width: 100%;
 }
 
 .Painel {
@@ -30,6 +45,13 @@ main {
     font-size: 20px;
     color: #006614;
     font-family: 'Roboto', sans-serif;
+}
+
+.Painel h2 {
+    font-size: 20px;
+    color: #00a020;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 /* ===== Dark Mode sobre.css ===== */
@@ -60,7 +82,11 @@ body.dark .Painel {
 }
 
 body.dark .Painel h1 {
-    color: #00c010;
+    color: #00ff15;
+}
+
+body.dark .Painel h2 {
+    color: #00db12;
 }
 
 body.dark  main p {
