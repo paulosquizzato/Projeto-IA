@@ -468,6 +468,10 @@ body.dark nav a:hover {
     color: #ffffff;
 }
 
+body.dark header h1 {
+    color: #13e400;
+}
+
 body.dark .barra {
     background-color: #00c010;
 }

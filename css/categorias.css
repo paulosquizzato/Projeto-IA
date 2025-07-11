@@ -8,6 +8,10 @@ body.dark header {
     background-color: #42613e;
 }
 
+body.dark header h1 {
+    color: #13e400;
+}
+
 body.dark nav a {
     color: #e0e0e0;
 }
