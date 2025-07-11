@@ -1,16 +1,33 @@
-main {
-    flex: 1;
-    padding: 40px;
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-    background-color: #F8FAFC;
+body.dark {
+    background-color: #424242;
+    color: #e0e0e0;
+    transition: 0.6s ease;
 }
 
-body.dark main {
-    background-color: #424242;
+body.dark header {
+    background-color: #42613e;
+}
+
+body.dark nav a {
     color: #e0e0e0;
 }
 
-body.dark main a {
-    color: #b2ffb2;
+body.dark nav a:hover {
+    color: #ffffff;
+}
+
+body.dark .barra {
+    background-color: #00c010;
+}
+
+body.dark  main p {
+    color: #fff;
+}
+
+body.dark footer {
+    background-color: #42613e;
+}
+
+body.dark footer span {
+    color: #00c010;
 }

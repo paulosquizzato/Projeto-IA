@@ -55,6 +55,14 @@ body.dark .barra {
     background-color: #00c010;
 }
 
+body.dark .Painel {
+    background-color: #006614;
+}
+
+body.dark .Painel h1 {
+    color: #00c010;
+}
+
 body.dark  main p {
     color: #fff;
 }
