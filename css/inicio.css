@@ -277,15 +277,15 @@ section h2 {
 .point.deepseek {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
-    left: 94%;
+    left: 82%;
     top: 13%;
 }
 
 .point.blackbox {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
-    left: 96%;
-    top: 13%;
+    left: 84%;
+    top: 18%;
 }
 
 .point.leonardoai {
