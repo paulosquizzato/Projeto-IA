@@ -268,8 +268,8 @@ section h2 {
 }
 
 .point.chatgpt {
-    top: 15%;
-    left: 83%;
+    top: 13%;
+    left: 20%;
     transform: translate(-50%, -50%);
     background-color: #00ff0d;
 }
@@ -277,21 +277,21 @@ section h2 {
 .point.deepseek {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
-    left: 47%;
-    top: 96%;
+    left: 94%;
+    top: 13%;
 }
 
 .point.blackbox {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
-    left: 63%;
-    top: 94%;
+    left: 96%;
+    top: 13%;
 }
 
 .point.leonardoai {
     transform: translate(-50%, -50%);
     background-color: #979797;
-    left: 4%;
+    left: 95%;
     top: 60%;
 }
 
@@ -323,10 +323,20 @@ section h2 {
     transition: opacity 0.5s ease;
 }
 
+#painel-overlay img.nota {
+    height: 35px;
+    width: auto;
+    margin-top: 70px;
+} 
+
 #painel-overlay img {
     width: 50px;
     height: auto;
-    z-index: 3;
+    z-index: 1;
+}
+
+#painel-overlay h2 {
+    margin-top: 10px;
 }
 
 #painel-overlay.ativo {
@@ -351,15 +361,14 @@ section h2 {
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     height: 60px;
     background-color: #ffffff;
     border-radius: 10px;
-    z-index: 1; 
-}
-
-#painel-conteudo h2 {
-    margin-top: 0;
+    z-index: 2;
 }
 
 .fechar-painel {
@@ -413,6 +422,25 @@ section h2 {
     border-radius: 5px;
     text-align: center;
     transform: translate(-50%, -50%);
+}
+
+.painel-box a {
+    text-decoration: none;
+    background-color: #13e400;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #42613e;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%)
+}
+
+.painel-box a:hover {
+    background-color: #00c010;
+    color: #fff;
+    font-size: 25px;
 }
 
 .texto-camada.pid {
