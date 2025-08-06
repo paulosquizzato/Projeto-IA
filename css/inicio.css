@@ -268,31 +268,45 @@ section h2 {
 }
 
 .point.chatgpt {
-    top: 13%;
-    left: 20%;
+    top: 15%;
+    left: 23%;
     transform: translate(-50%, -50%);
     background-color: #00ff0d;
 }
 
-.point.deepseek {
+.point.notebooklm {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
-    left: 82%;
+    left: 79%;
     top: 13%;
 }
 
-.point.blackbox {
+.point.pippitIA {
     transform: translate(-50%, -50%);
     background-color: #ffee00;
     left: 84%;
     top: 18%;
 }
 
-.point.leonardoai {
+.point.elevenlabs {
     transform: translate(-50%, -50%);
-    background-color: #979797;
-    left: 95%;
-    top: 60%;
+    background-color: #ff0000;
+    left: 59%;
+    top: 85%;
+}
+
+.point.midjourney {
+    transform: translate(-50%, -50%);
+    background-color: #00b7ff;
+    left: 82%;
+    top: 83%;
+}
+
+.point.gemini {
+    transform: translate(-50%, -50%);
+    background-color: #00ff0d;
+    left: 10%;
+    top: 25%;
 }
 
 .point:hover {

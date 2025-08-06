@@ -13,9 +13,11 @@ function abrirPainel(id) {
 }
 
 document.querySelector('.chatgpt')?.addEventListener('click', () => abrirPainel('painel-chatgpt'));
-document.querySelector('.deepseek')?.addEventListener('click', () => abrirPainel('painel-deepseek'));
-document.querySelector('.blackbox')?.addEventListener('click', () => abrirPainel('painel-blackbox'));
-document.querySelector('.leonardoai')?.addEventListener('click', () => abrirPainel('painel-leonardoai'));
+document.querySelector('.notebooklm')?.addEventListener('click', () => abrirPainel('painel-notebooklm'));
+document.querySelector('.pippitIA')?.addEventListener('click', () => abrirPainel('painel-pippitia'));
+document.querySelector('.elevenlabs')?.addEventListener('click', () => abrirPainel('painel-elevenlabs'));
+document.querySelector('.midjourney')?.addEventListener('click', () => abrirPainel('painel-midjourney'));
+document.querySelector('.gemini')?.addEventListener('click', () => abrirPainel('painel-gemini'));
 
 botoesFechar.forEach(btn => {
     btn.addEventListener('click', () => {
