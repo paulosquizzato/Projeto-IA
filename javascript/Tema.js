@@ -18,6 +18,9 @@ document.querySelector('.pippitIA')?.addEventListener('click', () => abrirPainel
 document.querySelector('.elevenlabs')?.addEventListener('click', () => abrirPainel('painel-elevenlabs'));
 document.querySelector('.midjourney')?.addEventListener('click', () => abrirPainel('painel-midjourney'));
 document.querySelector('.gemini')?.addEventListener('click', () => abrirPainel('painel-gemini'));
+document.querySelector('.stability')?.addEventListener('click', () => abrirPainel('painel-stability'));
+document.querySelector('.kling')?.addEventListener('click', () => abrirPainel('painel-kling'));
+document.querySelector('.suno')?.addEventListener('click', () => abrirPainel('painel-suno'));
 
 botoesFechar.forEach(btn => {
     btn.addEventListener('click', () => {

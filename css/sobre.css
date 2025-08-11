@@ -8,8 +8,7 @@ main {
 }
 
 main h1 {
-    font-size: 45px;
-    color: #ffffff;
+    font-size: 45px; 
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-bottom: 30px;
@@ -79,6 +78,10 @@ body.dark .barra {
 
 body.dark .Painel {
     background-color: #006614;
+}
+
+body.dark h1 {
+    color: white;
 }
 
 body.dark .Painel h1 {

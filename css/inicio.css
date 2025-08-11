@@ -309,6 +309,27 @@ section h2 {
     top: 25%;
 }
 
+.point.stability {
+    transform: translate(-50%, -50%);
+    background-color: #ff7b00;
+    left: 5%;
+    top: 60%;
+}
+
+.point.kling {
+    transform: translate(-50%, -50%);
+    background-color: #ff7b00;
+    left: 10%;
+    top: 50%;
+}
+
+.point.suno {
+    transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    left: 58%;
+    top: 96%;
+}
+
 .point:hover {
     height: 35px;
     width: 35px;
